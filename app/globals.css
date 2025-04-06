@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 0%;
+  --foreground: 0 0% 100%;
+  --card: 0 0% 3%;
+  --card-foreground: 0 0% 100%;
+  --popover: 0 0% 3%;
+  --popover-foreground: 0 0% 100%;
+  --primary: 196 100% 50%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 270 100% 60%;
+  --secondary-foreground: 0 0% 100%;
+  --muted: 0 0% 15%;
+  --muted-foreground: 0 0% 70%;
+  --accent: 196 100% 50%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 0 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 0 0% 20%;
+  --input: 0 0% 20%;
+  --ring: 196 100% 50%;
+  --radius: 0.75rem;
+}
+
+body {
+  background-color: black;
+  color: white;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  scroll-behavior: smooth;
+}
+
+/* Minimalist theme overrides */
+body.minimalist-theme {
+  background-color: white;
+  color: #333;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom scrollbar - Futuristic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #22d3ee, #a855f7);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #06b6d4, #9333ea);
+}
+
+/* Custom scrollbar - Minimalist */
+body.minimalist-theme::-webkit-scrollbar {
+  width: 8px;
+}
+
+body.minimalist-theme::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+body.minimalist-theme::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+
+body.minimalist-theme::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Theme-specific styles */
+.minimalist-theme .bg-white\/5 {
+  background-color: rgba(245, 245, 245, 0.8);
+}
+
+.minimalist-theme .border-white\/10 {
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.minimalist-theme .text-gray-300 {
+  color: #4b5563;
+}
+
+.minimalist-theme .text-cyan-300 {
+  color: #0284c7;
+}
+
+.minimalist-theme .text-white {
+  color: #333;
+}
+
+.minimalist-theme .text-gray-400 {
+  color: #6b7280;
+}
+
