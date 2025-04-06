@@ -6,7 +6,7 @@ import { GraduationCap, Calendar, MapPin } from "lucide-react"
 export default function Education() {
   const education = [
     {
-      degree: "Master of Science - Computational Color and Spectral Imaging", // Combined into one line
+      degree: "Master of Science - COSI", // Combined into one line
       field: "",
       institution: "Erasmus Mundus Joint Degree",
       period: "2023 - 2025",
